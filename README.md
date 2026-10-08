@@ -45,6 +45,8 @@ The paths hard-coded as defaults (`/mnt/Neuma_Model/...`) are those of the origi
 | - | `neuroclick_statistical_tests.py` | Primary first1 family: paired two-sided Wilcoxon, Student-t 95% intervals, Holm correction. |
 | - | `neuroclick_crc_extension_tests.py` | Camera-ready extension tests (first2/first3 comparisons, ET ablation tests, threshold-matched MCC per participant). Prints the paired tests to the console. |
 | - | `neuroclick_crc_mcc_16tests.py` | The 16-test Holm family for threshold-matched MCC reported in Sect. 4.5 (both strategies, both comparators, four horizons). |
+| - | `neuroclick_crc_truncation_counts.py` | Sect. 3.2 exclusion and truncation counts from the audit manifest. |
+| - | `neuroclick_crc_matched_baseline.py` | Sect. 3.5 sensitivity check: logistic baselines without the two validity fractions that behaviour-only NeuroClick never receives. |
 
 ## Results
 
@@ -58,7 +60,7 @@ out-of-fold predictions so that every statistic can be recomputed without re-tra
 | `results/neuroclick_primary_v1/` | statistical tests | `per_subject_metrics.csv`, `primary_pairwise_tests.csv`, `first1_model_intervals.csv`, `statistics_report.md` |
 | `results/ensemble_v1/` | script 07 | `ensemble_predictions.csv`, `ensemble_per_subject_metrics.csv`, `ensemble_pairwise_tests.csv` |
 | `results/catboost_first1_causal_v1/` | script 03 (earlier version, see below), model `catboost_fusion` | `summary_metrics.csv` (the CatBoost row of Table 2), `fold_metrics.csv`, `losocv_predictions.csv`, `run_config.json` |
-| `results/crc_extension/` | extension tests | `crc_extension_tests_output.txt` (console output: Table 5 rows for first2/first3 vs dwell+propensity and ET vs behaviour), `crc_ensemble_mcc_threshold_matched.csv` (per-participant threshold-matched MCC), `crc_mcc_16_tests.csv` (the 16-test Holm family quoted in Sect. 4.5, from `scripts/neuroclick_crc_mcc_16tests.py`) |
+| `results/crc_extension/` | extension tests | `crc_extension_tests_output.txt` (console output: Table 5 rows for first2/first3 vs dwell+propensity and ET vs behaviour), `crc_ensemble_mcc_threshold_matched.csv` (per-participant threshold-matched MCC), `crc_mcc_16_tests.csv` (the 16-test Holm family quoted in Sect. 4.5, from `scripts/neuroclick_crc_mcc_16tests.py`), `matched_baseline_no_validity.csv` (Sect. 3.5 sensitivity check: both logistic baselines re-evaluated without the two validity fractions, from `scripts/neuroclick_crc_matched_baseline.py`; it needs the visit-feature cache that script 03 writes, SHA-256 `41c486e9...`, and with scikit-learn 1.8 it reproduces the published 10-value baselines to within 0.002 pooled PR AUC) |
 
 | `results/audit_full_42_v2/` | script 01 | `subject_product_audit.csv`, `subject_summary.csv`, `audit_summary.json`, `unmatched_clicks.csv`, `FEASIBILITY_DECISION.txt` |
 | `results/cache_preclick_full_42_causal_v1/` | script 02 | `cache_summary.json` (cache counts, parameters and input hashes; the per-participant `.npz` caches are not included) |
