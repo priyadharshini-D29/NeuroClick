@@ -96,14 +96,36 @@ provided through an NVIDIA Academic Grant Program award. The camera-ready build 
 
 ## Citation
 
-```
-@inproceedings{neuroclick2026,
+If you use this code or these results, please cite the paper:
+
+> Priyadharshini D and Shridevi S. NeuroClick: Early Purchase Ranking from Ordered Neuromarketing Visits.
+> In: Proceedings of the International Conference on Artificial Intelligence and Neuroscience (ICAIN 2026).
+> Springer, 2026.
+
+**Authors**
+
+| Author | Role | ORCID |
+|---|---|---|
+| Priyadharshini D | First author (conceptualization, methodology, software, data curation, analysis, visualization, writing) | https://orcid.org/0009-0004-2291-1814 |
+| Shridevi S | Research guide and corresponding author (conceptualization, supervision, resources, funding acquisition, manuscript review) | https://orcid.org/0000-0002-0038-7212 |
+
+Both authors: Centre for Neuroinformatics, Vellore Institute of Technology, Chennai, India.
+
+BibTeX (names are braced so that BibTeX keeps "Priyadharshini D" and "Shridevi S" intact):
+
+```bibtex
+@inproceedings{priyadharshini2026neuroclick,
   title     = {NeuroClick: Early Purchase Ranking from Ordered Neuromarketing Visits},
-  author    = {Priyadharshini D and Shridevi S},
+  author    = {{Priyadharshini D} and {Shridevi S}},
   booktitle = {Proceedings of the International Conference on Artificial Intelligence and Neuroscience (ICAIN 2026)},
-  year      = {2026}
+  publisher = {Springer},
+  address   = {Cham},
+  year      = {2026},
+  note      = {Paper 456. Code: \url{https://github.com/priyadharshini-D29/NeuroClick}}
 }
 ```
+
+A `CITATION.cff` file is included, so GitHub's "Cite this repository" button gives the same reference.
 
 ## License
 

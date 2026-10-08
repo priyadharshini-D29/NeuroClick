@@ -1,0 +1,36 @@
+cff-version: 1.2.0
+message: "If you use this code or these results, please cite the paper below."
+type: software
+title: "NeuroClick: Early Purchase Ranking from Ordered Neuromarketing Visits"
+version: "1.0.0"
+date-released: "2026-10-08"
+repository-code: "https://github.com/priyadharshini-D29/NeuroClick"
+license: MIT
+authors:
+  - family-names: "D"
+    given-names: "Priyadharshini"
+    orcid: "https://orcid.org/0009-0004-2291-1814"
+    affiliation: "Centre for Neuroinformatics, Vellore Institute of Technology, Chennai, India"
+    email: "priyadharshini.2024b@vitstudent.ac.in"
+  - family-names: "S"
+    given-names: "Shridevi"
+    orcid: "https://orcid.org/0000-0002-0038-7212"
+    affiliation: "Centre for Neuroinformatics, Vellore Institute of Technology, Chennai, India"
+    email: "shridevi.s@vit.ac.in"
+preferred-citation:
+  type: conference-paper
+  title: "NeuroClick: Early Purchase Ranking from Ordered Neuromarketing Visits"
+  authors:
+    - family-names: "D"
+      given-names: "Priyadharshini"
+      orcid: "https://orcid.org/0009-0004-2291-1814"
+      affiliation: "Centre for Neuroinformatics, Vellore Institute of Technology, Chennai, India"
+    - family-names: "S"
+      given-names: "Shridevi"
+      orcid: "https://orcid.org/0000-0002-0038-7212"
+      affiliation: "Centre for Neuroinformatics, Vellore Institute of Technology, Chennai, India"
+  collection-title: "Proceedings of the International Conference on Artificial Intelligence and Neuroscience (ICAIN 2026)"
+  publisher:
+    name: "Springer"
+  year: 2026
+  notes: "Paper 456. Corresponding author: Shridevi S (shridevi.s@vit.ac.in)."
