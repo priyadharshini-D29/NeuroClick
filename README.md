@@ -105,6 +105,11 @@ provided through an NVIDIA Academic Grant Program award. The camera-ready build 
 }
 ```
 
+## License
+
+The code and derived result files in this repository are released under the MIT License (see `LICENSE`).
+The NeuMa dataset itself is governed by its own terms and is not part of this release.
+
 ## Contact
 
 Priyadharshini D, Centre for Neuroinformatics, Vellore Institute of Technology, Chennai
