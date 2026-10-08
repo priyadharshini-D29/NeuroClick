@@ -43,7 +43,8 @@ The paths hard-coded as defaults (`/mnt/Neuma_Model/...`) are those of the origi
 | 7 | `07_ensemble_neuroclick_baseline.py` | Average (logit space) and stacked ensembles of NeuroClick and the dwell+propensity baseline, with participant-paired tests. |
 | 8 | `08_generate_ensemble_figure.py` | Figure 7. |
 | - | `neuroclick_statistical_tests.py` | Primary first1 family: paired two-sided Wilcoxon, Student-t 95% intervals, Holm correction. |
-| - | `neuroclick_crc_extension_tests.py` | Camera-ready extension tests (first2/first3 comparisons, ET ablation tests, threshold-matched MCC). |
+| - | `neuroclick_crc_extension_tests.py` | Camera-ready extension tests (first2/first3 comparisons, ET ablation tests, threshold-matched MCC per participant). Prints the paired tests to the console. |
+| - | `neuroclick_crc_mcc_16tests.py` | The 16-test Holm family for threshold-matched MCC reported in Sect. 4.5 (both strategies, both comparators, four horizons). |
 
 ## Results
 
@@ -56,7 +57,8 @@ out-of-fold predictions so that every statistic can be recomputed without re-tra
 | `results/neuroclick_losocv_final_run_04/` | script 04 | `losocv_predictions.csv`, `fold_metrics.csv`, `summary_metrics.csv`, `run_config.json` |
 | `results/neuroclick_primary_v1/` | statistical tests | `per_subject_metrics.csv`, `primary_pairwise_tests.csv`, `first1_model_intervals.csv`, `statistics_report.md` |
 | `results/ensemble_v1/` | script 07 | `ensemble_predictions.csv`, `ensemble_per_subject_metrics.csv`, `ensemble_pairwise_tests.csv` |
-| `results/crc_extension/` | extension tests | `crc_ensemble_mcc_threshold_matched.csv` |
+| `results/catboost_first1_causal_v1/` | script 03 (earlier version, see below), model `catboost_fusion` | `summary_metrics.csv` (the CatBoost row of Table 2), `fold_metrics.csv`, `losocv_predictions.csv`, `run_config.json` |
+| `results/crc_extension/` | extension tests | `crc_extension_tests_output.txt` (console output: Table 5 rows for first2/first3 vs dwell+propensity and ET vs behaviour), `crc_ensemble_mcc_threshold_matched.csv` (per-participant threshold-matched MCC), `crc_mcc_16_tests.csv` (the 16-test Holm family quoted in Sect. 4.5, from `scripts/neuroclick_crc_mcc_16tests.py`) |
 
 | `results/audit_full_42_v2/` | script 01 | `subject_product_audit.csv`, `subject_summary.csv`, `audit_summary.json`, `unmatched_clicks.csv`, `FEASIBILITY_DECISION.txt` |
 | `results/cache_preclick_full_42_causal_v1/` | script 02 | `cache_summary.json` (cache counts, parameters and input hashes; the per-participant `.npz` caches are not included) |
@@ -73,6 +75,11 @@ the files in this repository hash to exactly those values.
 | both `run_config.json` | `results/cache_preclick_full_42_causal_v1/cache_summary.json` | `47c6f03b` |
 | `classical .../run_config.json` | `scripts/03_run_classical_losocv_benchmarks.py` | `584c4dea` |
 | `neuroclick .../run_config.json` | `scripts/04_run_neuroclick_hazard.py` | `d527acfa` |
+| `catboost .../run_config.json` | `scripts/legacy/03_run_classical_losocv_benchmarks_catboost_run.py` | `546b37b5` |
+
+The CatBoost baseline was run separately (`--models catboost_fusion`, GPU) with an earlier revision of
+script 03 on the same causal caches; that revision is kept under `scripts/legacy/` so its hash can be checked.
+Every value in Tables 2 to 6 and in Sect. 4.5 was re-derived from these files when the repository was assembled.
 
 Predictions are indexed by held-out participant, horizon and audit instance; participant identifiers
 are the NeuMa subject codes, and labels are the stated purchase selections from the dataset.

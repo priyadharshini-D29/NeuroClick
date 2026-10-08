@@ -1,0 +1,5 @@
+BENCHMARK_GO
+
+Strict 42-fold LOSOCV completed.
+Primary horizon: first1.
+Primary metric: PR-AUC.

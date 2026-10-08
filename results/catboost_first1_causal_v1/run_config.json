@@ -1,0 +1,52 @@
+{
+  "decision": "BENCHMARK_GO",
+  "config": {
+    "cache": "/mnt/Neuma_Model/icain_neuroclick_work/cache/preclick_full_42_causal_v1",
+    "output": "/mnt/Neuma_Model/icain_neuroclick_work/outputs/benchmarks/catboost_first1_causal_v1",
+    "feature_cache": "/mnt/Neuma_Model/icain_neuroclick_work/cache/classical_visit_features_causal_v1.npz",
+    "horizons": [
+      "first1"
+    ],
+    "models": [
+      "catboost_fusion"
+    ],
+    "seed": 42,
+    "select_percentile": 25,
+    "logreg_c": 1.0,
+    "catboost_iterations": 300,
+    "catboost_depth": 5,
+    "catboost_learning_rate": 0.05,
+    "ece_bins": 10,
+    "inner_folds": 3,
+    "threshold_mode": "inner_mcc",
+    "product_smoothing": 10.0,
+    "catboost_task_type": "GPU"
+  },
+  "cohort": {
+    "subjects": 42,
+    "instances": 5715,
+    "buys": 746,
+    "nobuys": 4969
+  },
+  "horizon_counts": [
+    {
+      "horizon": "first1",
+      "instances": 5715,
+      "buys": 746,
+      "nobuys": 4969,
+      "subjects": 42
+    }
+  ],
+  "hashes": {
+    "sequence_cache_summary_sha256": "47c6f03b899c6f238c45572d18e9975fe4d9e4cee2a8f478fb79dd7a611e7485",
+    "visit_feature_cache_sha256": "41c486e958e37fdeffd1a1841a1ac6f8c2dd27f918b67aad4ae9b7db049bf64c",
+    "benchmark_script_sha256": "546b37b53be2f8be7b0aff692ceac6fdc686a48a9f50958d0fc8456540fa6402"
+  },
+  "software": {
+    "python": "3.13.12",
+    "numpy": "2.4.6",
+    "pandas": "3.0.3",
+    "scipy": "1.17.1",
+    "scikit_learn": "1.8.0"
+  }
+}

@@ -1,0 +1,95 @@
+﻿=== A. New confirmatory family (PR AUC, Holm across 4) ===
+behavior vs logreg_dwell_propensity @ first2: n=42, means 0.4703 vs 0.4527, diff=+0.0176, CI [-0.0015,+0.0368], raw p=0.08219, Holm p=0.32876
+behavior vs logreg_dwell_propensity @ first3: n=42, means 0.5283 vs 0.5133, diff=+0.0150, CI [-0.0106,+0.0406], raw p=0.13457, Holm p=0.40371
+behavior_et vs behavior @ first1: n=42, means 0.3569 vs 0.3532, diff=+0.0037, CI [-0.0122,+0.0195], raw p=0.78545, Holm p=1.00000
+behavior_et vs behavior @ first2: n=42, means 0.4638 vs 0.4703, diff=-0.0065, CI [-0.0243,+0.0113], raw p=0.73828, Holm p=1.00000
+
+=== B. Dispersion (participant PR AUC mean/SD) ===
+                                   mean     std  count
+model                   horizon                       
+behavior                first1   0.3532  0.1194     42
+                        first2   0.4703  0.1482     42
+                        first3   0.5283  0.1417     42
+                        full     0.5558  0.1491     42
+behavior_eeg            first1   0.3340  0.1140     42
+                        first2   0.4459  0.1466     42
+                        first3   0.4919  0.1302     42
+                        full     0.5263  0.1555     42
+behavior_eeg_et         first1   0.3277  0.1195     42
+                        first2   0.4371  0.1495     42
+                        first3   0.4892  0.1440     42
+                        full     0.5315  0.1605     42
+behavior_et             first1   0.3569  0.1300     42
+                        first2   0.4638  0.1377     42
+                        first3   0.5105  0.1453     42
+                        full     0.5548  0.1604     42
+behavior_no_propensity  first1   0.3008  0.1173     42
+                        first2   0.4276  0.1526     42
+                        first3   0.5119  0.1601     42
+                        full     0.5415  0.1635     42
+logreg_behavior         first1   0.3052  0.1198     42
+                        first2   0.4220  0.1543     42
+                        first3   0.4991  0.1669     42
+                        full     0.6049  0.1738     42
+logreg_dwell_propensity first1   0.3557  0.1109     42
+                        first2   0.4527  0.1363     42
+                        first3   0.5133  0.1397     42
+                        full     0.6176  0.1621     42
+logreg_eeg              first1   0.1738  0.0634     42
+                        first2   0.2067  0.0868     42
+                        first3   0.2612  0.0855     42
+                        full     0.2438  0.0938     42
+logreg_et               first1   0.2298  0.0779     42
+                        first2   0.2941  0.0950     42
+                        first3   0.3764  0.1483     42
+                        full     0.4777  0.1538     42
+logreg_fusion           first1   0.2155  0.0721     42
+                        first2   0.2827  0.0966     42
+                        first3   0.3725  0.1395     42
+                        full     0.4855  0.1441     42
+prevalence              first1   0.1309  0.0433     42
+                        first2   0.1551  0.0514     42
+                        first3   0.1852  0.0620     42
+                        full     0.1309  0.0433     42
+product_propensity      first1   0.2754  0.0946     42
+                        first2   0.3084  0.1043     42
+                        first3   0.3534  0.1203     42
+                        full     0.2754  0.0946     42
+total_dwell             first1   0.3053  0.1215     42
+                        first2   0.3924  0.1422     42
+                        first3   0.4486  0.1586     42
+                        full     0.4618  0.1480     42
+visit_count             first1   0.1309  0.0433     42
+                        first2   0.1551  0.0514     42
+                        first3   0.1852  0.0620     42
+                        full     0.2306  0.0723     42
+
+=== C. Threshold-matched MCC (participant mean/SD) ===
+                                mean     std  count
+horizon model                                      
+first1  baseline_probability  0.2112  0.1024     42
+        ensemble_average      0.1767  0.0973     42
+        ensemble_stacked      0.2211  0.1056     42
+        gru_probability       0.2337  0.1255     42
+first2  baseline_probability  0.2864  0.1268     42
+        ensemble_average      0.3271  0.1641     42
+        ensemble_stacked      0.3173  0.1592     42
+        gru_probability       0.2873  0.1460     42
+first3  baseline_probability  0.3361  0.1495     42
+        ensemble_average      0.3351  0.1645     42
+        ensemble_stacked      0.3700  0.1567     42
+        gru_probability       0.3692  0.1585     42
+full    baseline_probability  0.4792  0.1620     42
+        ensemble_average      0.4753  0.1483     42
+        ensemble_stacked      0.4737  0.1519     42
+        gru_probability       0.4371  0.1457     42
+
+Paired Wilcoxon, best ensemble vs component (Holm across 8):
+first1: ensemble_stacked vs gru_probability: n=42, diff=-0.0125, CI [-0.0343,+0.0092], raw p=0.3083, Holm p=1.0000
+first1: ensemble_stacked vs baseline_probability: n=42, diff=+0.0099, CI [-0.0137,+0.0335], raw p=0.4516, Holm p=1.0000
+first2: ensemble_average vs gru_probability: n=42, diff=+0.0398, CI [+0.0135,+0.0660], raw p=0.0031, Holm p=0.0251
+first2: ensemble_average vs baseline_probability: n=42, diff=+0.0407, CI [+0.0067,+0.0747], raw p=0.0065, Holm p=0.0392
+first3: ensemble_stacked vs gru_probability: n=42, diff=+0.0008, CI [-0.0305,+0.0322], raw p=0.2797, Holm p=1.0000
+first3: ensemble_stacked vs baseline_probability: n=42, diff=+0.0339, CI [-0.0002,+0.0679], raw p=0.0482, Holm p=0.2408
+full: ensemble_average vs gru_probability: n=42, diff=+0.0381, CI [+0.0133,+0.0630], raw p=0.0042, Holm p=0.0296
+full: ensemble_average vs baseline_probability: n=42, diff=-0.0039, CI [-0.0202,+0.0125], raw p=0.4183, Holm p=1.0000
