@@ -1,0 +1,15 @@
+{
+  "expected_subjects": 42,
+  "observed_neural_subjects": 42,
+  "primary_horizon": "first1",
+  "inferential_unit": "held-out subject",
+  "test": "two-sided paired Wilcoxon signed-rank",
+  "multiplicity": "Holm across four confirmatory tests",
+  "confidence_interval": "95% Student-t interval",
+  "neural_prediction_files": [
+    "cache/final_run_04/losocv_predictions.csv"
+  ],
+  "classical_prediction_files": [
+    "cache/final_run_03/losocv_predictions.csv"
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "decision": "HAZARD_GO",
+  "configuration": {
+    "root": "/mnt/Neuma_Model",
+    "output": "/mnt/Neuma_Model/icain_neuroclick_work/outputs/audit/full_42_v2",
+    "screen_width": 1920,
+    "screen_height": 1080,
+    "min_fixation_ms": 100.0,
+    "merge_gap_ms": 75.0,
+    "pre_click_margin_ms": 500.0,
+    "max_mouse_staleness_s": 60.0,
+    "min_valid_subjects": 35,
+    "min_usable_buys": 500,
+    "min_positive_multivisit": 100
+  },
+  "n_subjects_processed": 42,
+  "failed_subjects": {},
+  "n_subject_product_instances": 6048,
+  "n_all_product_buys": 756,
+  "all_product_buy_prevalence": 0.125,
+  "n_considered_instances": 5715,
+  "n_considered_buys": 746,
+  "n_considered_nobuys": 4969,
+  "considered_buy_prevalence": 0.1305336832895888,
+  "n_positive_multivisit": 653,
+  "n_subjects_primary_both_classes": 42,
+  "n_raw_left_presses": 867,
+  "n_in_page_presses": 763,
+  "n_mapped_product_presses": 763,
+  "in_page_press_to_product_roi_rate": 1.0,
+  "n_unmatched_click_records": 104,
+  "checks": {
+    "all_requested_subjects_processed": true,
+    "at_least_min_valid_subjects": true,
+    "at_least_min_usable_buys": true,
+    "at_least_min_positive_multivisit": true,
+    "at_least_min_subjects_with_both_classes": true,
+    "zero_post_click_by_construction": true
+  },
+  "warnings": []
+}

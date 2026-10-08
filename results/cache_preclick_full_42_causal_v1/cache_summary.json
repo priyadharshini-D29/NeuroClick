@@ -1,0 +1,59 @@
+{
+  "decision": "CACHE_GO",
+  "subjects": 42,
+  "instances": 5715,
+  "buys": 746,
+  "nobuys": 4969,
+  "buy_prevalence": 0.1305336832895888,
+  "visits": 17278,
+  "multivisit_instances": 4332,
+  "truncated_instances": 0,
+  "config": {
+    "root": "/mnt/Neuma_Model",
+    "audit_script": "/home/nvidia/24PHD1314/ICAIN2026_NeuroClick_Hazard/scripts/01_audit_buy_nobuy_events.py",
+    "output": "/mnt/Neuma_Model/icain_neuroclick_work/cache/preclick_full_42_causal_v1",
+    "eeg_fs": 300.0,
+    "et_fs": 120.0,
+    "window_s": 1.0,
+    "min_fixation_ms": 100.0,
+    "merge_gap_ms": 75.0,
+    "pre_click_margin_ms": 500.0,
+    "max_visits": 0,
+    "interpolation_gap_multiplier": 2.5,
+    "roi_context_clip": 2.0,
+    "screen_width": 1920,
+    "screen_height": 1080
+  },
+  "canonical_channels": [
+    "P3",
+    "C3",
+    "F3",
+    "Fz",
+    "F4",
+    "C4",
+    "P4",
+    "Cz",
+    "Pz",
+    "Fp1",
+    "Fp2",
+    "T3",
+    "T5",
+    "O1",
+    "O2",
+    "F7",
+    "F8",
+    "T6",
+    "T4"
+  ],
+  "hashes": {
+    "audit_csv_sha256": "038e19cb53eeed018105ecf76aff0388862c12af91d99b5f8291d2ecf5002126",
+    "audit_script_sha256": "35a0036473390f46ef9bb3950caa9a275d87d64752753155ba94ff1cd89ce913",
+    "harmonizer_sha256": "824e9fb4e07f73cb16c2d85ad2bc85ab667ada02b79ea2b3ea433a6a944fdd40",
+    "cache_script_sha256": "66942d9ba7063a0d3dfeb454a8bb97576a456f12ba7358fa8e737de7eb418c92"
+  },
+  "software": {
+    "python": "3.13.12",
+    "numpy": "2.4.6",
+    "pandas": "3.0.3"
+  }
+}

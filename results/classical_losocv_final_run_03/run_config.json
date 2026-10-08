@@ -1,0 +1,84 @@
+{
+  "decision": "BENCHMARK_GO",
+  "config": {
+    "cache": "/mnt/Neuma_Model/icain_neuroclick_work/cache/preclick_full_42_causal_v1",
+    "output": "/mnt/Neuma_Model/icain_neuroclick_work/cache/final_run_03",
+    "feature_cache": "/mnt/Neuma_Model/icain_neuroclick_work/cache/classical_visit_features_causal_v1.npz",
+    "horizons": [
+      "first1",
+      "first2",
+      "first3",
+      "full"
+    ],
+    "models": [
+      "prevalence",
+      "product_propensity",
+      "visit_count",
+      "total_dwell",
+      "logreg_behavior",
+      "logreg_dwell_propensity",
+      "logreg_eeg",
+      "logreg_et",
+      "logreg_fusion"
+    ],
+    "seed": 42,
+    "select_percentile": 25,
+    "logreg_c": 1.0,
+    "catboost_iterations": 300,
+    "catboost_depth": 5,
+    "catboost_learning_rate": 0.05,
+    "ece_bins": 10,
+    "inner_folds": 3,
+    "threshold_mode": "inner_mcc",
+    "product_smoothing": 10.0,
+    "catboost_task_type": "CPU"
+  },
+  "cohort": {
+    "subjects": 42,
+    "instances": 5715,
+    "buys": 746,
+    "nobuys": 4969
+  },
+  "horizon_counts": [
+    {
+      "horizon": "first1",
+      "instances": 5715,
+      "buys": 746,
+      "nobuys": 4969,
+      "subjects": 42
+    },
+    {
+      "horizon": "first2",
+      "instances": 4332,
+      "buys": 653,
+      "nobuys": 3679,
+      "subjects": 42
+    },
+    {
+      "horizon": "first3",
+      "instances": 2835,
+      "buys": 487,
+      "nobuys": 2348,
+      "subjects": 42
+    },
+    {
+      "horizon": "full",
+      "instances": 5715,
+      "buys": 746,
+      "nobuys": 4969,
+      "subjects": 42
+    }
+  ],
+  "hashes": {
+    "sequence_cache_summary_sha256": "47c6f03b899c6f238c45572d18e9975fe4d9e4cee2a8f478fb79dd7a611e7485",
+    "visit_feature_cache_sha256": "41c486e958e37fdeffd1a1841a1ac6f8c2dd27f918b67aad4ae9b7db049bf64c",
+    "benchmark_script_sha256": "584c4deac71bc1924807b574476c340dfe3685cb26bbcb8b278452fdc991a6a9"
+  },
+  "software": {
+    "python": "3.13.12",
+    "numpy": "2.4.6",
+    "pandas": "2.3.3",
+    "scipy": "1.18.0",
+    "scikit_learn": "1.9.0"
+  }
+}

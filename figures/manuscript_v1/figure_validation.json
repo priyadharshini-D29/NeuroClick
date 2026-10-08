@@ -1,0 +1,419 @@
+{
+  "available_horizons": [
+    "first1",
+    "first2",
+    "first3",
+    "full"
+  ],
+  "available_models": [
+    "behavior",
+    "behavior_eeg",
+    "behavior_eeg_et",
+    "behavior_et",
+    "behavior_no_propensity",
+    "logreg_behavior",
+    "logreg_dwell_propensity",
+    "logreg_eeg",
+    "logreg_et",
+    "logreg_fusion",
+    "prevalence",
+    "product_propensity",
+    "total_dwell",
+    "visit_count"
+  ],
+  "duplicate_rows_within_source": 0,
+  "figure_data": {
+    "fig01": {
+      "horizon_buy_counts": {
+        "first1": 746,
+        "first2": 653,
+        "first3": 487,
+        "full": 746
+      },
+      "horizon_total_counts": {
+        "first1": 5715,
+        "first2": 4332,
+        "first3": 2835,
+        "full": 5715
+      },
+      "n_buy": 746,
+      "n_instances": 5715,
+      "n_nobuy": 4969,
+      "n_subjects": 42,
+      "n_visits": 17278
+    },
+    "fig02": {
+      "behavior_input": 6,
+      "eeg_input": 153,
+      "et_input": 70,
+      "gru_hidden": 64,
+      "gru_input": 64,
+      "projection_dim": 64
+    },
+    "fig03": {
+      "behavior": {
+        "mcc": 0.22198958939164226,
+        "n": 5715,
+        "n_buy": 746,
+        "pr_auc": 0.2735984399669149,
+        "prevalence": 0.1305336832895888,
+        "roc_auc": 0.7020323593410512
+      },
+      "logreg_behavior": {
+        "mcc": 0.20494551412284157,
+        "n": 5715,
+        "n_buy": 746,
+        "pr_auc": 0.24502445504248666,
+        "prevalence": 0.1305336832895888,
+        "roc_auc": 0.636303257137955
+      },
+      "logreg_dwell_propensity": {
+        "mcc": 0.2152299483653721,
+        "n": 5715,
+        "n_buy": 746,
+        "pr_auc": 0.2937783161983861,
+        "prevalence": 0.1305336832895888,
+        "roc_auc": 0.7089159221489588
+      },
+      "total_dwell": {
+        "mcc": 0.19998369000371885,
+        "n": 5715,
+        "n_buy": 746,
+        "pr_auc": 0.24649414220407367,
+        "prevalence": 0.1305336832895888,
+        "roc_auc": 0.6287657740727092
+      }
+    },
+    "fig04": {
+      "metrics": [
+        {
+          "horizon": "first1",
+          "mcc": 0.22198958939164226,
+          "model": "behavior",
+          "n": 5715,
+          "n_buy": 746,
+          "pr_auc": 0.2735984399669149,
+          "prevalence": 0.1305336832895888,
+          "roc_auc": 0.7020323593410512
+        },
+        {
+          "horizon": "first1",
+          "mcc": 0.20494551412284157,
+          "model": "logreg_behavior",
+          "n": 5715,
+          "n_buy": 746,
+          "pr_auc": 0.24502445504248666,
+          "prevalence": 0.1305336832895888,
+          "roc_auc": 0.636303257137955
+        },
+        {
+          "horizon": "first2",
+          "mcc": 0.2570000506865508,
+          "model": "behavior",
+          "n": 4332,
+          "n_buy": 653,
+          "pr_auc": 0.3741879540551092,
+          "prevalence": 0.1507386888273315,
+          "roc_auc": 0.7533282522757575
+        },
+        {
+          "horizon": "first2",
+          "mcc": 0.2567891052880689,
+          "model": "logreg_behavior",
+          "n": 4332,
+          "n_buy": 653,
+          "pr_auc": 0.31904330071382,
+          "prevalence": 0.1507386888273315,
+          "roc_auc": 0.710040055994309
+        },
+        {
+          "horizon": "first3",
+          "mcc": 0.29484793903847084,
+          "model": "behavior",
+          "n": 2835,
+          "n_buy": 487,
+          "pr_auc": 0.4132088675195556,
+          "prevalence": 0.17178130511463846,
+          "roc_auc": 0.7657720844162887
+        },
+        {
+          "horizon": "first3",
+          "mcc": 0.307037625590778,
+          "model": "logreg_behavior",
+          "n": 2835,
+          "n_buy": 487,
+          "pr_auc": 0.3789548581063438,
+          "prevalence": 0.17178130511463846,
+          "roc_auc": 0.7502107608729871
+        },
+        {
+          "horizon": "full",
+          "mcc": 0.39088571900816244,
+          "model": "behavior",
+          "n": 5715,
+          "n_buy": 746,
+          "pr_auc": 0.4429485255005635,
+          "prevalence": 0.1305336832895888,
+          "roc_auc": 0.847647505688081
+        },
+        {
+          "horizon": "full",
+          "mcc": 0.45316648098670637,
+          "model": "logreg_behavior",
+          "n": 5715,
+          "n_buy": 746,
+          "pr_auc": 0.4651773633753648,
+          "prevalence": 0.1305336832895888,
+          "roc_auc": 0.8583294171854775
+        }
+      ],
+      "neuroclick_minus_logistic_pr_auc": {
+        "first1": 0.028573984924428253,
+        "first2": 0.05514465334128921,
+        "first3": 0.03425400941321183,
+        "full": -0.022228837874801288
+      }
+    },
+    "fig05": {
+      "column_order": [
+        "first1",
+        "first2",
+        "first3",
+        "full"
+      ],
+      "counts": {
+        "behavior/first1": {
+          "n": 5715,
+          "n_buy": 746
+        },
+        "behavior/first2": {
+          "n": 4332,
+          "n_buy": 653
+        },
+        "behavior/first3": {
+          "n": 2835,
+          "n_buy": 487
+        },
+        "behavior/full": {
+          "n": 5715,
+          "n_buy": 746
+        },
+        "behavior_eeg/first1": {
+          "n": 5715,
+          "n_buy": 746
+        },
+        "behavior_eeg/first2": {
+          "n": 4332,
+          "n_buy": 653
+        },
+        "behavior_eeg/first3": {
+          "n": 2835,
+          "n_buy": 487
+        },
+        "behavior_eeg/full": {
+          "n": 5715,
+          "n_buy": 746
+        },
+        "behavior_eeg_et/first1": {
+          "n": 5715,
+          "n_buy": 746
+        },
+        "behavior_eeg_et/first2": {
+          "n": 4332,
+          "n_buy": 653
+        },
+        "behavior_eeg_et/first3": {
+          "n": 2835,
+          "n_buy": 487
+        },
+        "behavior_eeg_et/full": {
+          "n": 5715,
+          "n_buy": 746
+        },
+        "behavior_et/first1": {
+          "n": 5715,
+          "n_buy": 746
+        },
+        "behavior_et/first2": {
+          "n": 4332,
+          "n_buy": 653
+        },
+        "behavior_et/first3": {
+          "n": 2835,
+          "n_buy": 487
+        },
+        "behavior_et/full": {
+          "n": 5715,
+          "n_buy": 746
+        }
+      },
+      "pr_auc": [
+        [
+          0.2735984399669149,
+          0.3741879540551092,
+          0.4132088675195556,
+          0.4429485255005635
+        ],
+        [
+          0.3003006747311887,
+          0.38319748624944927,
+          0.3982677339598357,
+          0.42858721145677553
+        ],
+        [
+          0.27263325400301697,
+          0.3665777769682776,
+          0.3961504073569293,
+          0.42686759846191413
+        ],
+        [
+          0.26506062374066547,
+          0.35448300472513117,
+          0.39457860284056234,
+          0.4142465900622114
+        ]
+      ],
+      "row_order": [
+        "behavior",
+        "behavior_et",
+        "behavior_eeg",
+        "behavior_eeg_et"
+      ]
+    },
+    "fig06": {
+      "holm_p_values": {
+        "mcc": {
+          "behavior_no_propensity": 0.0294672660425938,
+          "logreg_behavior": 0.6406572726623381,
+          "logreg_dwell_propensity": 0.7170760728013192,
+          "total_dwell": 0.071990239195237
+        },
+        "pr_auc": {
+          "behavior_no_propensity": 8.736747986404225e-05,
+          "logreg_behavior": 0.0006022929455866,
+          "logreg_dwell_propensity": 0.7570400010772573,
+          "total_dwell": 0.0005480019981405
+        }
+      },
+      "summary": [
+        {
+          "mean": 0.23363247895953626,
+          "metric": "mcc",
+          "model": "behavior",
+          "n_subjects": 42,
+          "std": 0.11008427980690143
+        },
+        {
+          "mean": 0.3531874120661629,
+          "metric": "pr_auc",
+          "model": "behavior",
+          "n_subjects": 42,
+          "std": 0.1194007552109256
+        },
+        {
+          "mean": 0.21118330682892264,
+          "metric": "mcc",
+          "model": "logreg_behavior",
+          "n_subjects": 42,
+          "std": 0.1303741354868071
+        },
+        {
+          "mean": 0.3052246269805955,
+          "metric": "pr_auc",
+          "model": "logreg_behavior",
+          "n_subjects": 42,
+          "std": 0.11975036320139705
+        },
+        {
+          "mean": 0.21981152885753033,
+          "metric": "mcc",
+          "model": "logreg_dwell_propensity",
+          "n_subjects": 42,
+          "std": 0.09624294589359993
+        },
+        {
+          "mean": 0.3556812405426013,
+          "metric": "pr_auc",
+          "model": "logreg_dwell_propensity",
+          "n_subjects": 42,
+          "std": 0.11087434304018286
+        },
+        {
+          "mean": 0.19911510532231824,
+          "metric": "mcc",
+          "model": "total_dwell",
+          "n_subjects": 42,
+          "std": 0.14174182516145217
+        },
+        {
+          "mean": 0.3053104788165254,
+          "metric": "pr_auc",
+          "model": "total_dwell",
+          "n_subjects": 42,
+          "std": 0.12151491701600592
+        }
+      ]
+    }
+  },
+  "figures": {
+    "fig01": {
+      "pdf": "/mnt/Neuma_Model/icain_neuroclick_work/outputs/figures_verify_v1/fig01_dataset_sequence_profile.pdf",
+      "png": "/mnt/Neuma_Model/icain_neuroclick_work/outputs/figures_verify_v1/fig01_dataset_sequence_profile.png"
+    },
+    "fig02": {
+      "pdf": "/mnt/Neuma_Model/icain_neuroclick_work/outputs/figures_verify_v1/fig02_neuroclick_architecture.pdf",
+      "png": "/mnt/Neuma_Model/icain_neuroclick_work/outputs/figures_verify_v1/fig02_neuroclick_architecture.png"
+    },
+    "fig03": {
+      "pdf": "/mnt/Neuma_Model/icain_neuroclick_work/outputs/figures_verify_v1/fig03_first1_pr_roc_curves.pdf",
+      "png": "/mnt/Neuma_Model/icain_neuroclick_work/outputs/figures_verify_v1/fig03_first1_pr_roc_curves.png"
+    },
+    "fig04": {
+      "pdf": "/mnt/Neuma_Model/icain_neuroclick_work/outputs/figures_verify_v1/fig04_horizon_pr_auc.pdf",
+      "png": "/mnt/Neuma_Model/icain_neuroclick_work/outputs/figures_verify_v1/fig04_horizon_pr_auc.png"
+    },
+    "fig05": {
+      "pdf": "/mnt/Neuma_Model/icain_neuroclick_work/outputs/figures_verify_v1/fig05_modality_ablation_heatmap.pdf",
+      "png": "/mnt/Neuma_Model/icain_neuroclick_work/outputs/figures_verify_v1/fig05_modality_ablation_heatmap.png"
+    },
+    "fig06": {
+      "pdf": "/mnt/Neuma_Model/icain_neuroclick_work/outputs/figures_verify_v1/fig06_participant_paired_results.pdf",
+      "png": "/mnt/Neuma_Model/icain_neuroclick_work/outputs/figures_verify_v1/fig06_participant_paired_results.png"
+    }
+  },
+  "first1_model_checks": {
+    "behavior": {
+      "mcc": 0.22198958939164226,
+      "n": 5715,
+      "n_buy": 746,
+      "pr_auc": 0.2735984399669149,
+      "prevalence": 0.1305336832895888,
+      "roc_auc": 0.7020323593410512
+    },
+    "logreg_behavior": {
+      "mcc": 0.20494551412284157,
+      "n": 5715,
+      "n_buy": 746,
+      "pr_auc": 0.24502445504248666,
+      "prevalence": 0.1305336832895888,
+      "roc_auc": 0.636303257137955
+    },
+    "total_dwell": {
+      "mcc": 0.19998369000371885,
+      "n": 5715,
+      "n_buy": 746,
+      "pr_auc": 0.24649414220407367,
+      "prevalence": 0.1305336832895888,
+      "roc_auc": 0.6287657740727092
+    }
+  },
+  "primary_first1": {
+    "mcc": 0.22198958939164226,
+    "n": 5715,
+    "n_buy": 746,
+    "n_subjects": 42,
+    "pr_auc": 0.2735984399669149,
+    "prevalence": 0.1305336832895888,
+    "roc_auc": 0.7020323593410512
+  }
+}

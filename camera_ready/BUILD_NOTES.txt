@@ -1,0 +1,88 @@
+﻿ICAIN 2026 paper 456 - camera-ready builds
+==========================================
+
+v6 (8 Oct 2026) - response to the external audit of v5
+------------------------------------------------------
+  ICAIN2026_456_NeuroClick_CRC_v6.docx / .pdf   CURRENT deliverables (13 pages)
+  scripts/v6/   apply_edits.py, apply_edits2.py, move_fig7.py (document.xml edits, in that order),
+                make_fig7.py (Fig 7 from the results CSV), pack.py, pack_export.ps1 (Word COM export
+                with UseISO19005_1 = True so every font is embedded), fix_images.py (swaps Word's
+                200 dpi figure bitmaps for the 600 dpi PNGs with PyMuPDF and drops the PDF/A XMP tag),
+                inspect_pdf.py (font/dpi check), dump_paras.py
+  Text changes
+   - Sect. 4.1: "above NeuroClick on every pooled metric" corrected (Table 2: NeuroClick is higher on
+     balanced accuracy and MCC)
+   - Table 6: all four delta-vs-baseline values filled in (+.0055, +.0187, +.0170, +.0019) from
+     ensemble_pairwise_tests.csv; caption rewritten to match
+   - Abstract, Sect. 4.2, Discussion, Conclusion: the only significant gain over the static baseline
+     is the average ensemble at first2 (+0.0187, Holm p = 0.022); complete history only matches it
+   - "pooling artefact" -> numerical pooled advantage not supported by participant-paired testing
+   - "released" code -> "accompanying" code; Code availability: "will be released ... on publication"
+   - Sect. 3.2: states that signals are read from the raw NeuMa XDF files (not the supplied zero-phase
+     preprocessed arrays); causal CAR, 1-45 Hz band-pass, 50 Hz notch named
+   - Sect. 4.5 and Limitations: the stacked ensemble and the threshold-matched MCC rule reuse the
+     single outer LOPO prediction set (not re-nested); the parameter-free average is unaffected.
+     Limitations also names the unquantified clipped-visit issue for Buy sequences.
+   - Fig 7 moved to directly after Table 6 (otherwise it spilled to p.10 and left p.9 half empty)
+  Fig 7 regenerated from ensemble_per_subject_metrics.csv participant means (n = 42):
+     NeuroClick .3532/.4703/.5283/.5558; dwell+propensity .3557/.4527/.5133/.6176;
+     average ensemble .3612/.4713/.5303/.6195  -> closes open item 1 below (bar now = .5558 + .0637)
+  Source of the numbers: results live only inside the split backup tars under
+     D:\PRIYA\NVDIA BACKUP\backup_2026-09-26\07_mnt_Neuma_Model_rest (Neuma_Model/icain_neuroclick_work/
+     outputs/statistics/ensemble_v1/) and the scripts under 01_home_24PHD1314 (24PHD1314/
+     ICAIN2026_NeuroClick_Hazard/scripts/). Nothing was extracted; read in memory.
+  Still open for the authors: push the code to github.com/medpriya/ICAIN (repo still empty);
+     similarity report; multi-seed variance; share of Buy first visits clipped at click-500 ms
+     (needs the per-visit npz caches, not the audit CSVs).
+
+v2-v5 (6-7 Oct 2026)
+--------------------
+
+Deliverables (in D:\PRIYA\ICAIN):
+  ICAIN2026_456_NeuroClick_CRC_v5.docx   FINAL edited Word source (Springer LNCS template, 13 pages)
+  ICAIN2026_456_NeuroClick_CRC_v5.pdf    FINAL, exported from the v5 docx with Word 2010
+  (_v2*, _v3*, _v4* are earlier builds: two-row Fig 2 / icons before the pointer-and-eye fix; safe to delete)
+  ICAIN2026_456_NeuroClick_CRC.docx/.pdf original v1, untouched
+
+figures/   the six replaced figure PNGs (600 dpi)
+  fig2.png  architecture, redrawn in the ORIGINAL single-row format (make_fig2_singlerow.py); same geometry as v1 (wide panel, icon beside text); type ~4.4 pt vs ~3.5 pt before;
+            head labelled "visit score" to match Sect. 3.4, loop labelled s(j-1), hazard line removed
+  fig2_tworow_alternative.png  two-row variant with 7-8 pt type (make_fig2.py), not used in v2
+  fig3.png  original raster with "behavior" -> "behaviour" in both legends
+  fig4.png  regenerated from Table 3 values
+  fig5.png  regenerated from Table 4 values
+  fig6.png  original raster; Holm p-value lines moved out of the plotting area into a band
+  fig7.png  regenerated; values .3532/.3557/.3612/.5558 from the text, the other eight bars
+            digitised from the v1 raster (tick-label calibrated, about +/-0.001)
+  Fig 1 was not changed.
+
+scripts/   everything needed to redo the build
+  make_fig2.py make_fig4.py make_fig5.py make_fig7.py   matplotlib regenerations
+  fix_fig3.py fix_fig6.py                              raster edits (OpenCV inpainting)
+  fig7_digitize.py fig7_calib.py                       bar digitisation for Fig 7
+  edit_docx.py fix_ext.py fix2.py fix3.py fix4.py fix6.py   XML edits, in that order
+  pack.py topdf.ps1 render_pdf.py                      zip, Word COM export, page rendering
+
+Document changes made in v2
+  - figures 2-7 replaced; figure paragraphs keep-with-caption; caption keep-with-next off
+  - Table 2 caption restyled to tablecaption; column widths widened; all table cells
+    left-aligned with zero first-line indent (template Normal style leaked a justified indent)
+  - header rows repeat and rows do not split in every table
+  - Table 6 rebuilt with columns Horizon | delta vs NeuroClick | Holm p | delta vs baseline | Holm p
+  - references 4, 5, 10, 11, 13, 14, 15, 18, 22 completed from CrossRef/arXiv; en dashes in page ranges
+  - "Conflict of interest" -> "Disclosure of Interests" (current LNCS wording)
+  - Sect. 3.5: "in response to review" removed; baseline naming clarified
+  - Fig. 2 caption rewritten for the new drawing
+
+Open items for the authors (not fixable from the manuscript alone)
+  1. Fig 7, complete history: the v1 figure's ensemble bar (~.616) is 0.003 below NeuroClick .5558 + .0637.
+     Check participant_mean values in the ensemble results CSV and correct either the figure or the text.
+  2. Confirm the "dwell + propensity" baseline uses the same five behaviour features as "Logistic behaviour".
+  3. Logistic-regression and CatBoost hyperparameters are not stated anywhere; add one sentence if known.
+  4. github.com/medpriya/ICAIN exists but is empty; push the code before the proceedings appear.
+  5. Similarity report (Turnitin/iThenticate) still required: <15 % overall, <4 % per source.
+
+
+
+
+

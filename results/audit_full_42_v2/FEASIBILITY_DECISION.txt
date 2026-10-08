@@ -1,0 +1,11 @@
+HAZARD_GO
+
+Subjects processed: 42
+Subject-product instances: 6048
+All-product Buy count: 756
+Considered Buy count: 746
+Considered NoBuy count: 4969
+Positive multi-visit cases: 653
+Subjects with both primary classes: 42
+
+Warnings:

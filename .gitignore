@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+*.npz
+*.npy
+*.pt
+*.pth
+*.xdf
+*.mat
+neuma_source/
+cache/
+data/
+.DS_Store
+Thumbs.db
+~$*

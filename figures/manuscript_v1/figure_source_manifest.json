@@ -1,0 +1,46 @@
+{
+  "generated_without_retraining": true,
+  "project_root": "/home/nvidia/24PHD1314/ICAIN2026_NeuroClick_Hazard",
+  "sources": [
+    {
+      "path": "/mnt/Neuma_Model/icain_neuroclick_work/cache/final_run_04/losocv_predictions.csv",
+      "sha256": "eb14a9e27502e1b5527cbd626366e0b0604300f13112268cbf199fcefaab4c85",
+      "size_bytes": 10837245
+    },
+    {
+      "path": "/mnt/Neuma_Model/icain_neuroclick_work/cache/final_run_03/losocv_predictions.csv",
+      "sha256": "72c6072a26e410d82cbba3c013e96099566b68e24869f1c0c62a2dacdb632012",
+      "size_bytes": 12749443
+    },
+    {
+      "path": "/mnt/Neuma_Model/icain_neuroclick_work/cache/classical_visit_features_causal_v1.npz",
+      "sha256": "41c486e958e37fdeffd1a1841a1ac6f8c2dd27f918b67aad4ae9b7db049bf64c",
+      "size_bytes": 13734301
+    },
+    {
+      "path": "/home/nvidia/24PHD1314/ICAIN2026_NeuroClick_Hazard/scripts/04_run_neuroclick_hazard.py",
+      "sha256": "d527acfa51c55c91747189c3c8b13a1ea15da42dff061d8eea8fd1e67f251ab7",
+      "size_bytes": 58993
+    },
+    {
+      "path": "/home/nvidia/24PHD1314/ICAIN2026_NeuroClick_Hazard/outputs/statistics/neuroclick_primary_v1/analysis_manifest.json",
+      "sha256": "122c9ccbd9d6ff32be530fbe17aced4fc1021886c272fa7a4878c203eb27cca4",
+      "size_bytes": 466
+    },
+    {
+      "path": "/mnt/Neuma_Model/icain_neuroclick_work/outputs/statistics/neuroclick_primary_v1/per_subject_metrics.csv",
+      "sha256": "8ffeab1c73f01b4140fa6b50b24d34135195cf1d1e1444c236021ecdabda67aa",
+      "size_bytes": 159713
+    },
+    {
+      "path": "/mnt/Neuma_Model/icain_neuroclick_work/outputs/statistics/neuroclick_primary_v1/primary_pairwise_tests.csv",
+      "sha256": "6bdf4493beeccaf3caadcb080f7d30aa437dc16aa2d9d1160592380a085e0de4",
+      "size_bytes": 1977
+    },
+    {
+      "path": "/mnt/Neuma_Model/icain_neuroclick_work/outputs/statistics/neuroclick_primary_v1/first1_model_intervals.csv",
+      "sha256": "1e61c87e59a84ddabbdc673b459617c7f920ec478e0733a9083018c021fa093b",
+      "size_bytes": 1809
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+# Versions recorded in results/*/run_config.json (Python 3.13.12, CUDA 13.0, NVIDIA A100)
+numpy==2.4.6
+pandas==2.3.3
+scipy==1.18.0
+scikit-learn==1.9.0
+torch==2.13.0
+catboost
+statsmodels
+matplotlib
+pillow
+pyxdf
