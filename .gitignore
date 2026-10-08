@@ -8,8 +8,8 @@ __pycache__/
 *.xdf
 *.mat
 neuma_source/
-cache/
-data/
+/cache/
+/data/
 .DS_Store
 Thumbs.db
 ~$*
